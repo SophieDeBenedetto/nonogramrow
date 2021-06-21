@@ -29,7 +29,10 @@ defmodule BinaryCounter do
     calculate(tail, [])
   end
 
-  def calculate(list, counts \\ [])
+  def calculate(list) do
+    convert(list)
+  end
+
   def calculate([head | tail], []) when head == 1 do
     calculate(tail, [1])
   end
