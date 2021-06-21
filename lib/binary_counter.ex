@@ -1,13 +1,5 @@
 defmodule BinaryCounter do
 
-  def new() do
-    []
-  end
-
-  def new(list) do
-    list
-  end
-
   def nonogramrow() do
     new()
     |> calculate()
@@ -19,6 +11,14 @@ defmodule BinaryCounter do
     |> new()
     |> calculate()
     |> convert()
+  end
+
+  def new() do
+    []
+  end
+
+  def new(list) do
+    list
   end
 
   def calculate([head | tail]) when head == 1 do
